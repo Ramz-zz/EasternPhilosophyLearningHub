@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Members</title>
+<style>
+    /* ===== GLOBAL RESET ===== */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* ===== LARGE BACKGROUND ===== */
+    body {
+        background: url('images/1st.png') no-repeat center center/cover;
+        font-family: Arial, sans-serif;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        padding: 20px;
+        color: #333;
+    }
+
+    /* ===== HOME BUTTON ===== */
+    .home-btn {
+        position: fixed;
+        top: 15px;
+        left: 15px;
+        background: rgba(255, 255, 255, 0.85); /* translucent white */
+        border: 2px solid rgba(0, 255, 200, 0.4); /* neon teal border */
+        padding: 8px 16px;
+        border-radius: 30px;
+        color: #222;
+        font-weight: bold;
+        text-decoration: none;
+        box-shadow:
+            0 12px 30px rgba(0, 0, 0, 0.25),
+            0 0 15px rgba(0, 255, 200, 0.25); /* neon glow */
+        transition: all 0.3s ease;
+        z-index: 1000;
+        font-size: 0.9rem;
+        animation: floatEffect 6s ease-in-out infinite;
+    }
+    .home-btn:hover {
+        background: rgba(0, 255, 200, 0.3);
+        border-color: rgba(0, 255, 200, 0.8);
+        color: #fff;
+        box-shadow: 0 0 20px rgba(0, 255, 200, 0.6);
+        transform: scale(1.05);
+    }
+
+    /* ===== FLOATING CONTAINER ===== */
+    .profile-container {
+        background: rgba(255, 255, 255, 0.85);
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow:
+          0 12px 30px rgba(0, 0, 0, 0.25),
+          0 0 15px rgba(0, 255, 200, 0.25);
+        max-width: 900px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+        justify-content: center;
+        animation: floatEffect 6s ease-in-out infinite;
+        transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+    .profile-container:hover {
+        box-shadow:
+          0 20px 40px rgba(0, 0, 0, 0.35),
+          0 0 25px rgba(0, 255, 200, 0.45);
+        transform: scale(1.02);
+    }
+
+    /* ===== FLOATING ANIMATION ===== */
+    @keyframes floatEffect {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-6px); }
+    }
+
+    /* ===== PROFILE CARD ===== */
+    .profile {
+        background: rgba(255, 255, 255, 0.85);
+        border-radius: 12px;
+        padding: 12px;
+        text-align: center;
+        backdrop-filter: blur(6px);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 0.8s ease forwards;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* ===== FADE-IN STAGGER ===== */
+    .profile:nth-child(1) { animation-delay: 0.1s; }
+    .profile:nth-child(2) { animation-delay: 0.2s; }
+    .profile:nth-child(3) { animation-delay: 0.3s; }
+    .profile:nth-child(4) { animation-delay: 0.4s; }
+    .profile:nth-child(5) { animation-delay: 0.5s; }
+    .profile:nth-child(6) { animation-delay: 0.6s; }
+    .profile:nth-child(7) { animation-delay: 0.7s; }
+    .profile:nth-child(8) { animation-delay: 0.8s; }
+    .profile:nth-child(9) { animation-delay: 0.9s; }
+    .profile:nth-child(10) { animation-delay: 1.0s; }
+    .profile:nth-child(11) { animation-delay: 1.1s; }
+
+    @keyframes fadeInUp {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Hover effect */
+    .profile:hover {
+        transform: translateY(-4px) scale(1.05);
+        box-shadow: 0 10px 22px rgba(0, 0, 0, 0.22);
+    }
+
+    /* ===== PROFILE IMAGE ===== */
+    .profile img {
+        width: 100%;
+        max-width: 90px;
+        height: 90px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 3px solid #fff;
+        margin-bottom: 8px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* Image hover glow */
+    .profile img:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 14px rgba(0, 255, 200, 0.8);
+    }
+
+    /* ===== PROFILE NAME ===== */
+    .profile h3 {
+        font-size: 1rem;
+        margin-bottom: 4px;
+        color: #222;
+    }
+
+    /* ===== PROFILE DESCRIPTION ===== */
+    .profile p {
+        font-size: 0.85rem;
+        color: #444;
+    }
+
+    /* ===== RESPONSIVENESS ===== */
+    @media (max-width: 900px) {
+        .profile-container {
+            grid-template-columns: repeat(3, 1fr);
+            max-width: 700px;
+        }
+    }
+    @media (max-width: 600px) {
+        .profile-container {
+            grid-template-columns: repeat(2, 1fr);
+            max-width: 400px;
+        }
+        .profile img {
+            max-width: 70px;
+            height: 70px;
+        }
+    }
+    @media (max-width: 400px) {
+        .profile-container {
+            grid-template-columns: 1fr;
+            max-width: 300px;
+        }
+    }
+</style>
+</head>
+<body>
+
+<!-- Home Button -->
+<a href="home.html" class="home-btn">Home</a>
+
+<div class="profile-container">
+    <div class="profile">
+        <img src="images/pf1.jpg" alt="Profile 1" />
+        <h3>Aliah Hanna Faith Buitizon</h3>
+        <p>"dependable and focused in completing tasks"</p>
+    </div>
+    <div class="profile">
+        <img src="images/pf2.jpg" alt="Profile 2" />
+        <h3>Carl Tamondong</h3>
+        <p>"friendly with a positive and energetic attitude"</p>
+    </div>
+    <div class="profile">
+        <img src="images/pf3.jpg" alt="Profile 3" />
+        <h3>Cleric James Telan</h3>
+        <p>"sana ako nalang pinili mo"</p>
+    </div>
+    <div class="profile">
+        <img src="images/pf4.jpg" alt="Profile 4" />
+        <h3>Eiram John Domondon</h3>
+        <p>"miss na kita"</p>
+    </div>
+    <div class="profile">
+        <img src="images/pf5.jpg" alt="Profile 5" />
+        <h3>Gwn Alcantara</h3>
+        <p>"pag binato ka ng bato, lambingin mo naman ako"</p>
+    </div>
+    <div class="profile">
+        <img src="images/pf6.jpg" alt="Profile 6" />
+        <h3>Hanns DeLeon</h3>
+        <p>"music lover"</p>
+    </div>
+    <div class="profile">
+        <img src="images/pf7.jpg" alt="Profile 7" />
+        <h3>Hans Ezekiel Datinguinoo</h3>
+        <p>"have an Obsession with cats"</p>
+    </div>
+    <div class="profile">
+        <img src="images/pf8.jpg" alt="Profile 8" />
+        <h3>MJ Vasquez</h3>
+        <p>"likes to stay at home"</p>
+    </div>
+    <div class="profile">
+        <img src="images/pf12.jpg" alt="Profile 9" />
+        <h3>Rainier Manalo</h3>
+        <p>"quiet, cheerful, patient, or friendly"</p>
+    </div>
+    <div class="profile">
+        <img src="images/pf10.jpg" alt="Profile 10" />
+        <h3>Alen Ferfas</h3>
+        <p>"likes playing with babies"</p>
+    </div>
+    <div class="profile">
+        <img src="images/pf13.jpg" alt="Profile 11" />
+        <h3>Yuriko Sage Fable Dragneel</h3>
+        <p>"quiet but can be talkative and like drawing, guitar, and helping people"</p>
+    </div>
+</div>
+
+</body>
+</html>

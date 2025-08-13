@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Group 2 Presentation Homepage</title>
+<style>
+    /* ===== RESET & BASE ===== */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background: url('images/f2.png') no-repeat center center/cover;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 50px 20px 100px; /* extra bottom padding so faces won't overlap footer */
+        color: #fff;
+        position: relative;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+        text-align: center;
+        margin-bottom: 40px;
+        text-shadow: 1px 1px 8px rgba(0,0,0,0.7);
+    }
+    header h1 {
+        font-size: 3rem;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+    header p {
+        font-size: 1.2rem;
+        opacity: 0.9;
+        margin-top: 8px;
+    }
+
+    /* ===== SECTIONS CONTAINER (Main 6 Sections) ===== */
+    .sections-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
+        max-width: 900px;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.85);
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow:
+            0 10px 30px rgba(0, 0, 0, 0.4),
+            0 0 15px rgba(0, 255, 200, 0.6);
+        animation: floatEffect 6s ease-in-out infinite;
+        color: #222;
+    }
+
+    @keyframes floatEffect {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-6px); }
+    }
+
+    /* ===== SECTION CARD ===== */
+    .section-card {
+        background: rgba(255, 255, 255, 0.85);
+        border-radius: 15px;
+        padding: 20px;
+        text-align: center;
+        backdrop-filter: blur(6px);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 160px;
+
+        /* 3 cards per row with gap considered */
+        flex: 1 1 calc(33.333% - 20px);
+        max-width: 280px;
+    }
+
+    .section-card:hover {
+        transform: translateY(-5px) scale(1.03);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    }
+
+    .section-card h3 {
+        font-size: 1.4rem;
+        color: #222;
+        margin-bottom: 8px;
+    }
+
+    .section-card p {
+        font-size: 1rem;
+        color: #444;
+        opacity: 0.9;
+    }
+
+    /* ===== FACES SECTION ===== */
+    .faces-section {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        background: rgba(255, 255, 255, 0.85);
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow:
+            0 10px 30px rgba(0, 0, 0, 0.4),
+            0 0 15px rgba(0, 255, 200, 0.6);
+        width: 220px;
+        animation: floatEffect 6s ease-in-out infinite;
+        z-index: 1000;
+        color: #222;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+        margin-top: 40px;
+        font-size: 0.9rem;
+        opacity: 0.8;
+        text-align: center;
+        width: 100%;
+        max-width: 900px;
+        color: #fff;
+    }
+
+    /* ===== RESPONSIVENESS ===== */
+    @media (max-width: 900px) {
+        .section-card {
+            flex: 1 1 calc(50% - 20px);
+            max-width: none;
+        }
+        .faces-section {
+            width: 180px;
+            padding: 15px;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .section-card {
+            flex: 1 1 100%;
+            max-width: none;
+        }
+        .faces-section {
+            position: static;
+            width: 100%;
+            margin-top: 30px;
+            padding: 15px;
+            box-shadow: none;
+            animation: none;
+        }
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Eastern Philosophy Learning Hub</h1>
+    <p>Select a section to explore</p>
+</header>
+
+<!-- Main 6 Sections -->
+<div class="sections-container">
+    <a class="section-card" href="1st.html" target="_blank">
+        <h3>Section 1</h3>
+        <p>The Universe Exists as Is</p>
+    </a>
+    <a class="section-card" href="2nd.html" target="_blank">
+        <h3>Section 2</h3>
+        <p>Foundations of Eastern Philosophy: The Chinese Tradition</p>
+    </a>
+    <a class="section-card" href="3rd.html" target="_blank">
+        <h3>Section 3</h3>
+        <p>How Eastern Philosophies Emphasize Teamwork, Family Obligations, and Social Harmony</p>
+    </a>
+    <a class="section-card" href="4th.html" target="_blank">
+        <h3>Section 4</h3>
+        <p>Cyclical Journey of Life</p>
+    </a>
+    <a class="section-card" href="5th.html" target="_blank">
+        <h3>Section 5</h3>
+        <p>The Interplay of Spirit and Theory</p>
+    </a>
+    <a class="section-card" href="6th.html" target="_blank">
+        <h3>Section 6</h3>
+        <p>Contentment and Selflessness</p>
+    </a>
+</div>
+
+<!-- Faces Section at bottom-left -->
+<div class="faces-section">
+    <a class="section-card" href="profile.html" target="_blank">
+        <h3>Faces Section</h3>
+        <p>Meet the Team</p>
+    </a>
+</div>
+
+<footer>
+    &copy; 2025 Eastern Philosophy Learning Hub. All Rights Reserved.
+</footer>
+
+</body>
+</html>

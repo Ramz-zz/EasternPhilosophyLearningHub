@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Cyclical Journey of Life</title>
+<style>
+    /* ===== GLOBAL RESET ===== */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* ===== LARGE BACKGROUND ===== */
+    body {
+        background: url('images/f7.png') no-repeat center center/cover;
+        font-family: Arial, sans-serif;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        color: #222;
+        position: relative;
+    }
+
+    /* ===== HOME BUTTON ===== */
+    .home-btn {
+        position: fixed;
+        top: 15px;
+        left: 15px;
+        background: rgba(255, 255, 255, 0.85);
+        border: 2px solid rgba(0, 255, 200, 0.4);
+        padding: 8px 16px;
+        border-radius: 30px;
+        color: #222;
+        font-weight: bold;
+        text-decoration: none;
+        box-shadow:
+            0 12px 30px rgba(0, 0, 0, 0.25),
+            0 0 15px rgba(0, 255, 200, 0.25);
+        transition: all 0.3s ease;
+        z-index: 1000;
+        font-size: 0.9rem;
+        animation: floatEffect 6s ease-in-out infinite;
+    }
+    .home-btn:hover {
+        background: rgba(0, 255, 200, 0.3);
+        border-color: rgba(0, 255, 200, 0.8);
+        color: #fff;
+        box-shadow: 0 0 20px rgba(0, 255, 200, 0.6);
+        transform: scale(1.05);
+    }
+
+    /* ===== FLOATING SECTION CONTAINER ===== */
+    .section-block {
+        background: rgba(255, 255, 255, 0.85);
+        padding: 25px 30px;
+        border-radius: 15px;
+        box-shadow:
+            0 12px 30px rgba(0, 0, 0, 0.25),
+            0 0 15px rgba(0, 255, 200, 0.25);
+        max-width: 900px;
+        width: 100%;
+        animation: floatEffect 6s ease-in-out infinite;
+        backdrop-filter: blur(6px);
+        color: #222;
+        transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+    .section-block:hover {
+        box-shadow:
+            0 20px 40px rgba(0, 0, 0, 0.35),
+            0 0 25px rgba(0, 255, 200, 0.45);
+        transform: scale(1.02);
+    }
+
+    @keyframes floatEffect {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-6px); }
+    }
+
+    /* ===== SECTION TITLE ===== */
+    .section-title {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 15px;
+        color: #222;
+    }
+
+    /* ===== SHORT DESCRIPTION ===== */
+    .section-description {
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+        line-height: 1.5;
+        color: #444;
+    }
+
+    /* ===== KEY POINTS LIST ===== */
+    .key-points {
+        margin-bottom: 20px;
+        padding-left: 20px;
+        color: #444;
+    }
+    .key-points li {
+        margin-bottom: 8px;
+    }
+
+    /* ===== PRESENTERS INFO ===== */
+    .presenters {
+        font-weight: bold;
+        margin-bottom: 15px;
+        color: #222;
+    }
+
+    /* ===== QUOTE OR REFERENCE ===== */
+    .quote {
+        font-style: italic;
+        font-size: 1rem;
+        border-left: 3px solid rgba(0, 255, 200, 0.6);
+        padding-left: 10px;
+        color: #555;
+        opacity: 0.9;
+    }
+
+    /* ===== RESPONSIVENESS ===== */
+    @media (max-width: 600px) {
+        .section-block {
+            padding: 20px 15px;
+            max-width: 100%;
+        }
+        .section-title {
+            font-size: 1.6rem;
+        }
+    }
+</style>
+</head>
+<body>
+
+<!-- Home Button -->
+<a href="home.html" class="home-btn">Home</a>
+
+<!-- ==== SECTION CONTENT ==== -->
+<div class="section-block">
+    <div class="section-title">Section 4: Cyclical Journey of Life</div>
+    <div class="section-description">
+        Many Eastern philosophies, such as Hinduism, Buddhism, and Taoism, see life as a continuous cycle of birth, life, death, and rebirth — rather than a straight path. This cycle, called samsara, is influenced by karma, where actions in this life shape the conditions of the next. The ultimate goal is liberation — nirvana or moksha — freedom from the cycle.
+    </div>
+    <ul class="key-points">
+        <li>Samsara: The endless cycle of birth, life, death, and rebirth.</li>
+        <li>Karma: The law of cause and effect — good actions bring positive results, bad actions bring negative ones.</li>
+        <li>Nirvana/Moksha: Liberation from the cycle of rebirth.</li>
+        <li>Life’s journey is a process of growth, learning, and spiritual progress.</li>
+        <li>The cycle is often compared to the seasons: spring (birth), summer (growth), autumn (aging), and winter (death), followed by renewal.</li>
+    </ul>
+    <div class="presenters">
+        Presented by: Cleric James Telan, Rainier Manalo, and Yuriko Sage Fable Dragneel
+    </div>
+    <div class="quote">
+        “As a man sows, so shall he reap.” — Bhagavad Gita
+    </div>
+</div>
+
+</body>
+</html>

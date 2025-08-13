@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>School of Taught Based Mainly From Asia</title>
+<style>
+    /* ===== GLOBAL RESET ===== */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* ===== LARGE BACKGROUND ===== */
+    body {
+        background: url('images/f5.png') no-repeat center center/cover;
+        font-family: Arial, sans-serif;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        color: #222;
+        position: relative;
+    }
+
+    /* ===== HOME BUTTON ===== */
+    .home-btn {
+        position: fixed;
+        top: 15px;
+        left: 15px;
+        background: rgba(255, 255, 255, 0.85);
+        border: 2px solid rgba(0, 255, 200, 0.4);
+        padding: 8px 16px;
+        border-radius: 30px;
+        color: #222;
+        font-weight: bold;
+        text-decoration: none;
+        box-shadow:
+            0 12px 30px rgba(0, 0, 0, 0.25),
+            0 0 15px rgba(0, 255, 200, 0.25);
+        transition: all 0.3s ease;
+        z-index: 1000;
+        font-size: 0.9rem;
+        animation: floatEffect 6s ease-in-out infinite;
+    }
+    .home-btn:hover {
+        background: rgba(0, 255, 200, 0.3);
+        border-color: rgba(0, 255, 200, 0.8);
+        color: #fff;
+        box-shadow: 0 0 20px rgba(0, 255, 200, 0.6);
+        transform: scale(1.05);
+    }
+
+    /* ===== FLOATING SECTION CONTAINER ===== */
+    .section-block {
+        background: rgba(255, 255, 255, 0.85);
+        padding: 25px 30px;
+        border-radius: 15px;
+        box-shadow:
+            0 12px 30px rgba(0, 0, 0, 0.25),
+            0 0 15px rgba(0, 255, 200, 0.25);
+        max-width: 900px;
+        width: 100%;
+        animation: floatEffect 6s ease-in-out infinite;
+        backdrop-filter: blur(6px);
+        color: #222;
+        transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+    .section-block:hover {
+        box-shadow:
+            0 20px 40px rgba(0, 0, 0, 0.35),
+            0 0 25px rgba(0, 255, 200, 0.45);
+        transform: scale(1.02);
+    }
+
+    @keyframes floatEffect {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-6px); }
+    }
+
+    /* ===== SECTION TITLE ===== */
+    .section-title {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 15px;
+        color: #222;
+    }
+
+    /* ===== SHORT DESCRIPTION ===== */
+    .section-description {
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+        line-height: 1.5;
+        color: #444;
+    }
+
+    /* ===== KEY POINTS LIST ===== */
+    .key-points {
+        margin-bottom: 20px;
+        padding-left: 20px;
+        color: #444;
+    }
+    .key-points li {
+        margin-bottom: 8px;
+    }
+
+    /* ===== PRESENTERS INFO ===== */
+    .presenters {
+        font-weight: bold;
+        margin-bottom: 15px;
+        color: #222;
+    }
+
+    /* ===== QUOTE OR REFERENCE ===== */
+    .quote {
+        font-style: italic;
+        font-size: 1rem;
+        border-left: 3px solid rgba(0, 255, 200, 0.6);
+        padding-left: 10px;
+        color: #555;
+        opacity: 0.9;
+    }
+
+    /* ===== RESPONSIVENESS ===== */
+    @media (max-width: 600px) {
+        .section-block {
+            padding: 20px 15px;
+            max-width: 100%;
+        }
+        .section-title {
+            font-size: 1.6rem;
+        }
+    }
+</style>
+</head>
+<body>
+
+<!-- Home Button -->
+<a href="home.html" class="home-btn">Home</a>
+
+<!-- ==== SECTION CONTENT ==== -->
+<div class="section-block">
+    <div class="section-title">Section 2: Foundations of Eastern Philosophy: The Chinese Tradition</div>
+    <div class="section-description">
+        Eastern philosophy in China has shaped the values, beliefs, and way of life of millions for centuries. It draws wisdom from Confucianism, Mahayana Buddhism, and Taoism, focusing on harmony, balance, and moral living. These traditions emphasize respect, interconnectedness, and living in alignment with the natural order of the universe.
+    </div>
+    <ul class="key-points">
+        <li>Originated in Asia, primarily in China.</li>
+        <li>Rooted in Confucianism (ethics, social harmony), Mahayana Buddhism (compassion, enlightenment), and Taoism (balance with nature).</li>
+        <li>Focuses on inner peace, moral duty, and harmony with the universe.</li>
+        <li>Values community, respect for elders, and interconnectedness.</li>
+    </ul>
+    <div class="presenters">
+        Presented by: Aliah Hanna Faith Buitizon and Hanns DeLeon
+    </div>
+    <div class="quote">
+        “When there is harmony in the home, there is order in the nation. When there is order in the nation, there is peace in the world.” — Confucius
+    </div>
+</div>
+
+</body>
+</html>

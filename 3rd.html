@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Collectivistic</title>
+<style>
+    /* ===== GLOBAL RESET ===== */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* ===== LARGE BACKGROUND ===== */
+    body {
+        background: url('images/f6.png') no-repeat center center/cover;
+        font-family: Arial, sans-serif;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        color: #222;
+        position: relative;
+    }
+
+    /* ===== HOME BUTTON ===== */
+    .home-btn {
+        position: fixed;
+        top: 15px;
+        left: 15px;
+        background: rgba(255, 255, 255, 0.85);
+        border: 2px solid rgba(0, 255, 200, 0.4);
+        padding: 8px 16px;
+        border-radius: 30px;
+        color: #222;
+        font-weight: bold;
+        text-decoration: none;
+        box-shadow:
+            0 12px 30px rgba(0, 0, 0, 0.25),
+            0 0 15px rgba(0, 255, 200, 0.25);
+        transition: all 0.3s ease;
+        z-index: 1000;
+        font-size: 0.9rem;
+        animation: floatEffect 6s ease-in-out infinite;
+    }
+    .home-btn:hover {
+        background: rgba(0, 255, 200, 0.3);
+        border-color: rgba(0, 255, 200, 0.8);
+        color: #fff;
+        box-shadow: 0 0 20px rgba(0, 255, 200, 0.6);
+        transform: scale(1.05);
+    }
+
+    /* ===== FLOATING SECTION CONTAINER ===== */
+    .section-block {
+        background: rgba(255, 255, 255, 0.85);
+        padding: 25px 30px;
+        border-radius: 15px;
+        box-shadow:
+            0 12px 30px rgba(0, 0, 0, 0.25),
+            0 0 15px rgba(0, 255, 200, 0.25);
+        max-width: 900px;
+        width: 100%;
+        animation: floatEffect 6s ease-in-out infinite;
+        backdrop-filter: blur(6px);
+        color: #222;
+        transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+    .section-block:hover {
+        box-shadow:
+            0 20px 40px rgba(0, 0, 0, 0.35),
+            0 0 25px rgba(0, 255, 200, 0.45);
+        transform: scale(1.02);
+    }
+
+    @keyframes floatEffect {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-6px); }
+    }
+
+    /* ===== SECTION TITLE ===== */
+    .section-title {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 15px;
+        color: #222;
+    }
+
+    /* ===== SHORT DESCRIPTION ===== */
+    .section-description {
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+        line-height: 1.5;
+        color: #444;
+    }
+
+    /* ===== KEY POINTS LIST ===== */
+    .key-points {
+        margin-bottom: 20px;
+        padding-left: 20px;
+        color: #444;
+    }
+    .key-points li {
+        margin-bottom: 8px;
+    }
+
+    /* ===== PRESENTERS INFO ===== */
+    .presenters {
+        font-weight: bold;
+        margin-bottom: 15px;
+        color: #222;
+    }
+
+    /* ===== QUOTE OR REFERENCE ===== */
+    .quote {
+        font-style: italic;
+        font-size: 1rem;
+        border-left: 3px solid rgba(0, 255, 200, 0.6);
+        padding-left: 10px;
+        color: #555;
+        opacity: 0.9;
+    }
+
+    /* ===== RESPONSIVENESS ===== */
+    @media (max-width: 600px) {
+        .section-block {
+            padding: 20px 15px;
+            max-width: 100%;
+        }
+        .section-title {
+            font-size: 1.6rem;
+        }
+    }
+</style>
+</head>
+<body>
+
+<!-- Home Button -->
+<a href="home.html" class="home-btn">Home</a>
+
+<!-- ==== SECTION CONTENT ==== -->
+<div class="section-block">
+    <div class="section-title">Section 3: How Eastern Philosophies Emphasize Teamwork, Family Obligations, and Social Harmony</div>
+    <div class="section-description">
+        Eastern philosophies see individuals as part of a larger community. They emphasize harmony with others, caring for family, and supporting the well-being of society as a path to personal fulfillment. This contrasts with many Western philosophies, which often focus more on personal freedom and independence.
+    </div>
+    <ul class="key-points">
+        <li>Confucianism centers on fulfilling one’s role in society — as a good child, loyal partner, or just leader — to maintain social order and peace.</li>
+        <li>Buddhism and Mahayana teach that all beings are interconnected, and the idea of a separate self is an illusion; they encourage compassion and selfless help for others.</li>
+        <li>Taoism emphasizes living in harmony with the Tao (the natural flow of life), valuing balance, flexibility, and allowing things to happen naturally without force.</li>
+    </ul>
+    <div class="presenters">
+        Presented by: MJ Vasquez and Carl Tamondong
+    </div>
+    <div class="quote">
+        “In all things, be at one with the world and at peace with others.” — Inspired by Eastern wisdom
+    </div>
+</div>
+
+</body>
+</html>
